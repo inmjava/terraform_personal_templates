@@ -1,4 +1,5 @@
 # Local .terraform directories
+terra.out
 .terraform.lock.hcl
 terraformaws.txt
 **/.terraform/*
