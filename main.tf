@@ -1,13 +1,8 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "5.34.0"
-    }
-  }
+provider "aws" {
+  region = "us-east-1"  # Altere para a região desejada
 }
 
-provider "aws" {
-  # Configuration options
-  region = "us-east-1"
+resource "aws_instance" "example" {
+  ami           = "ami-0c55b159cbfafe1f0"  # AMI da camada gratuita
+  instance_type = "t2.micro"
 }
